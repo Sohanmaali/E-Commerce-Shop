@@ -14,42 +14,24 @@ public class UserDao {
     private String userPassword;
     private String userPhone;
     private String userGender;
+
+    public UserDao(String userName, String userEmail, String userPassword, String userPhone, String userGender, String userAddress, String userCity, String userPincode, String userState) {
+//        this.userId = userId;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.userGender = userGender;
+        this.userAddress = userAddress;
+        this.userCity = userCity;
+        this.userPincode = userPincode;
+        this.userState = userState;
+    }
     private Timestamp dateTime;
     private String userAddress;
     private String userCity;
     private String userPincode;
     private String userState;
-
-    public UserDao() {
-
-    }
-
-    public UserDao(int userId, String userName, String userEmail, String userPassword, String userPhone, String userGender, Timestamp dateTime, String userAddress, String userCity, String userPincode, String userState) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userGender = userGender;
-        this.dateTime = dateTime;
-        this.userAddress = userAddress;
-        this.userCity = userCity;
-        this.userPincode = userPincode;
-        this.userState = userState;
-    }
-
-    public UserDao(String userName, String userEmail, String userPassword, String userPhone, String userGender, String userAddress, String userCity, String userPincode, String userState) {
-
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userGender = userGender;
-        this.userAddress = userAddress;
-        this.userCity = userCity;
-        this.userPincode = userPincode;
-        this.userState = userState;
-    }
 
     public int getUserId() {
         return userId;
@@ -139,4 +121,20 @@ public class UserDao {
         this.userState = userState;
     }
 
+    public UserDao() {
+    }
+
+    public UserDao(int userId, String userName, String userEmail, String userPassword, String userPhone, String userGender, Timestamp dateTime, String userAddress, String userCity, String userPincode, String userState) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.userGender = userGender;
+        this.dateTime = dateTime;
+        this.userAddress = userAddress;
+        this.userCity = userCity;
+        this.userPincode = userPincode;
+        this.userState = userState;
+    }
 }

@@ -8,6 +8,26 @@
         <servlet-name>UserRegisterServlet</servlet-name>
         <servlet-class>com.commerce.controlar.UserRegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EmployeeAddServlet</servlet-name>
+        <servlet-class>com.commerce.controlar.EmployeeAddServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserDeshboard</servlet-name>
+        <servlet-class>com.commerce.controlar.UserDeshboard</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginControlar</servlet-name>
+        <servlet-class>com.commerce.controlar.LoginControlar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistrationControlar</servlet-name>
+        <servlet-class>com.commerce.controlar.RegistrationControlar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>com.commerce.controlar.Logout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserLoginServlet</servlet-name>
         <url-pattern>/UserLoginServlet</url-pattern>
@@ -15,5 +35,25 @@
     <servlet-mapping>
         <servlet-name>UserRegisterServlet</servlet-name>
         <url-pattern>/UserRegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmployeeAddServlet</servlet-name>
+        <url-pattern>/EmployeeAddServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserDeshboard</servlet-name>
+        <url-pattern>/UserDeshboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginControlar</servlet-name>
+        <url-pattern>/LoginControlar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrationControlar</servlet-name>
+        <url-pattern>/RegistrationControlar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
 </web-app>

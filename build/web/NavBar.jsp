@@ -68,7 +68,7 @@
                             <ul>
                                 <li><a href="EmployeeLogin.jsp">Employee</a></li>
                                 <li class="dropdown">
-                                    <a href="Login.jsp"
+                                    <a href="UserLogin.jsp"
                                        ><span>User</span>
 
                                     </a>
@@ -81,7 +81,7 @@
 
                         <%--<jsp:forward page="Login.jsp" />--%>
                         <li>
-                            <a class="getstarted scrollto" href="Registration.jsp">Sign Up</a>
+                            <a class="getstarted scrollto" href="UserRegistration.jsp">Sign Up</a>
                         </li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>

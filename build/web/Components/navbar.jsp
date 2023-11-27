@@ -1,12 +1,21 @@
-
-<%@page import="java.util.List"%>
+<%--<%@page import="com.eazydeals.entities.Admin"%>
+<%@page import="com.eazydeals.entities.Cart"%>
+<%@page import="com.eazydeals.dao.CartDao"%>
+<%@page import="com.eazydeals.entities.User"%>--%>
+<%@page import="java.util.ArrayList"%>
+<%--<%@page import="com.eazydeals.entities.Category"%>--%>
+<%--<%@page import="com.eazydeals.helper.ConnectionProvider"%>--%>
+<%--<%@page import="com.eazydeals.dao.CategoryDao"%>--%>
 <%
 //User user = (User) session.getAttribute("activeUser");
 //Admin admin = (Admin) session.getAttribute("activeAdmin");
-//
+//UserDao user = (UserDao) session.getAttribute("activeUser");
+//AdminDao admin = (AdminDao) session.getAttribute("activeAdmin");
+
 //CategoryDao catDao = new CategoryDao(ConnectionProvider.getConnection());
 //List<Category> categoryList = catDao.getAllCategories();
-%>
+//<% ArrayList<ProductDao> prodList =(ArrayList<ProductDao>) session.getAttribute("productDao"); %>
+
 <style>
     .navbar {
         font-weight: 500;
@@ -30,11 +39,12 @@
 
     <!-- admin nav bar -->
     <%
-        if (true) {
+   // if (admin != null) {
+    if (true) {
     %>
     <div class="container">
         <a class="navbar-brand" href="admin.jsp"><i
-                class="fa-sharp fa-solid fa-house" style="color: #ffffff;"></i>&ensp;EazyDeals</a>
+                class="fa-sharp fa-solid fa-house" style="color: #ffffff;"></i>&ensp;Sohan</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -52,7 +62,9 @@
                                                  class="btn nav-link" data-bs-toggle="modal"
                                                  data-bs-target="#add-product"><i class="fa-solid fa-plus fa-xs"></i>Add Product</button></li>
                     <li class="nav-item"><a class="nav-link" aria-current="page"
-                                            href="admin.jsp">sohan</a></li>
+                                            href="admin.jsp">Admin name
+                            <%--<%=admin.getName()%>--%>
+                        </a></li>
                     <li class="nav-item"><a class="nav-link" aria-current="page"
                                             href="LogoutServlet?user=admin"><i
                                 class="fa-solid fa-user-slash fa-sm" style="color: #fafafa;"></i>&nbsp;Logout</a></li>
@@ -61,7 +73,7 @@
         </div>
     </div>
     <%
-        } else {
+    } else {
     %>
 
     <!-- end -->
@@ -87,12 +99,16 @@
                         <li><a class="dropdown-item" href="products.jsp?category=0">All
                                 Products</a></li>
                                 <%
-//						for (Category c : categoryList) {
+                               // for (Category c : categoryList) {
                                 %>
                         <li><a class="dropdown-item"
-                               href="#"</a></li>
+                               href="products.jsp?category=getCategoryId
+                               <%--<%=c.getCategoryId()%>--%>
+                               ">getCategoryName
+                                <%--<%=c.getCategoryName()%>--%>
+                            </a></li>
                             <%
-//						}
+                         //   }
                             %>
                     </ul></li>
             </ul>
@@ -106,23 +122,28 @@
 
             <!-- when user is logged in -->
             <%
-            if (false) {
-//                    CartDao cartDao = new CartDao(ConnectionProvider.getConnection());
-//                    int cartCount = cartDao.getCartCountByUserId(user.getUserId());
+           // if (user != null) {
+             //       CartDao cartDao = new CartDao(ConnectionProvider.getConnection());
+               //     int cartCount = cartDao.getCartCountByUserId(user.getUserId());
             %>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active pe-3"><a
                         class="nav-link position-relative" aria-current="page"
                         href="cart.jsp"><i class="fa-solid fa-cart-shopping"
                                        style="color: #ffffff;"></i> &nbsp;Cart<span
-                                       class="position-absolute top-1 start-0 translate-middle badge rounded-pill bg-danger">sohan</span></a></li>
+                                       class="position-absolute top-1 start-0 translate-middle badge rounded-pill bg-danger">
+                                       cartCount    <%--<%=cartCount%>--%>
+                                       </span></a></li>
                 <li class="nav-item active pe-3"><a class="nav-link"
-                                                    aria-current="page" href="profile.jsp">dzxc</a></li>
+                                                    aria-current="page" href="profile.jsp">
+                      getUserName  <%--<%=user.getUserName()%>--%>
+                    </a></li>
                 <li class="nav-item pe-3"><a class="nav-link"
                                              aria-current="page" href="LogoutServlet?user=user"><i
                             class="fa-solid fa-user-slash" style="color: #fafafa;"></i>&nbsp;Logout</a></li>
             </ul>
-            <%			} else {
+            <%
+            //} else {
             %>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active pe-2"><a class="nav-link"
@@ -139,8 +160,8 @@
         </div>
     </div>
     <%
-        }
-}        
+    //}
+    }
     %>
     <!-- end  -->
 </nav>
